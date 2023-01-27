@@ -29,7 +29,7 @@ app.get('/products/:id',(req, res)=>{
     const {id} = req.params
     const product = products.find(idProduct => idProduct.id === id)
     if(!product){
-        return res.send(`No existe el producto de ID ${id}`)
+        return res.send(`El producto de ID ${id} no existe`)
     }
     res.send(product)
 })
